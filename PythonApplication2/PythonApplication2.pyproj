@@ -4,13 +4,14 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>c31fcf1f-244f-45e2-8539-fbfbc83d1854</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>PythonApplication2.py</StartupFile>
+    <StartupFile>RTplot1.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>PythonApplication2</Name>
     <RootNamespace>PythonApplication2</RootNamespace>
+    <InterpreterId>CondaEnv|CondaEnv|Anaconda3</InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,7 +22,16 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="PythonApplication2.py" />
+    <Compile Include="data_gen.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RTplot1.py" />
+    <Compile Include="RTplot2.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="CondaEnv|CondaEnv|Anaconda3" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
